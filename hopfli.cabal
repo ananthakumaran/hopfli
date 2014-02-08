@@ -23,7 +23,7 @@ library
                        zlib >= 0.5.4
 
   hs-source-dirs:  src
-  ghc-options: -Wall -O2
+  ghc-options: -Wall
   default-language:    Haskell2010
   include-dirs: src/cbits
   c-sources: src/cbits/blocksplitter.c src/cbits/cache.c src/cbits/deflate.c
