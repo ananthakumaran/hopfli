@@ -76,7 +76,7 @@ compress options format input = unsafePerformIO $ do
           poke outPtrPtr nullPtr
           _ <- c_zopfli_compress optionsPtr (fromFormat format) (plusPtr inputPtr start) (fromIntegral length) outPtrPtr outSizePtr
           outSize <- peek outSizePtr
-          resultPtr <- throwIfNull "Zopfli compression falied" (peek outPtrPtr)
+          resultPtr <- throwIfNull "Zopfli compression failed" (peek outPtrPtr)
           resultFptr <- newForeignPtr finalizerFree resultPtr
           return $ fromForeignPtr resultFptr 0 (fromIntegral outSize)
 
