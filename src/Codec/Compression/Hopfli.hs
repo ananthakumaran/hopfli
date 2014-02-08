@@ -2,9 +2,12 @@
 
 module Codec.Compression.Hopfli (
   Format(..)
+  , CompressOptions(..)
+  , VerboseLevel(..)
   , compressWith
   , Codec.Compression.Hopfli.compress
   , defaultCompressOptions
+  , defaultFormat
 ) where
 
 import           Codec.Compression.Hopfli.Raw as Raw
