@@ -10,6 +10,7 @@ import qualified Codec.Compression.GZip     as G
 import qualified Codec.Compression.Zlib     as Z
 import qualified Codec.Compression.Zlib.Raw as ZR
 import qualified Data.ByteString            as B
+import           Data.ByteString.Char8      ()
 import           Data.ByteString.Internal   (fromForeignPtr, toForeignPtr)
 import qualified Data.ByteString.Lazy       as BL
 import           Foreign                    hiding (unsafePerformIO)
