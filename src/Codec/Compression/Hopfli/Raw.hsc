@@ -13,6 +13,7 @@ import qualified Data.ByteString            as B
 import           Data.ByteString.Char8      ()
 import           Data.ByteString.Internal   (fromForeignPtr, toForeignPtr)
 import qualified Data.ByteString.Lazy       as BL
+import           Data.ByteString.Lazy.Char8 ()
 import           Foreign                    hiding (unsafePerformIO)
 import           Foreign.C.Types
 import           Prelude                    hiding (length)
