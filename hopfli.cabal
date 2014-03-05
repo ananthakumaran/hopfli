@@ -1,6 +1,6 @@
 name:                hopfli
 version:             0.1.0.0
-synopsis:            zlib compatible compression using Zopfil Compression Algorithm
+synopsis:            zlib compatible compression using Zopfli Compression Algorithm
 homepage:            https://github.com/ananthakumaran/hopfli
 license:             Apache-2.0
 license-file:        LICENSE
