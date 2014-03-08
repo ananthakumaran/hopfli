@@ -6,3 +6,19 @@ compresses around 5% better than zlib and better than any other
 zlib-compatible compressor we have found.*
 
 Hopfli provides a pure interface to compress data using Zopfli algorithm.
+
+
+## Example
+
+````haskell
+import           Codec.Compression.Hopfli
+import           Data.ByteString
+import           System.IO                (stdin, stdout)
+
+main :: IO ()
+main = hGetContents stdin >>= hPut stdout . compressWith defaultCompressOptions GZIP
+````
+
+````
+runGhc example.hs < README.md > README.md.gz
+````
