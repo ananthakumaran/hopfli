@@ -10,7 +10,6 @@ import qualified Codec.Compression.GZip     as GZip
 import           Codec.Compression.Hopfli
 import qualified Codec.Compression.Zlib     as Zlib
 import qualified Codec.Compression.Zlib.Raw as ZRaw
-import           Control.Applicative
 import qualified Data.ByteString            as B
 import qualified Data.ByteString.Lazy       as BL
 

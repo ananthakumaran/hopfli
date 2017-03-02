@@ -14,7 +14,7 @@ import           Data.ByteString.Char8      ()
 import           Data.ByteString.Internal   (fromForeignPtr, toForeignPtr)
 import qualified Data.ByteString.Lazy       as BL
 import           Data.ByteString.Lazy.Char8 ()
-import           Foreign                    hiding (unsafePerformIO)
+import           Foreign
 import           Foreign.C.Types
 import           Prelude                    hiding (length)
 import           System.IO.Unsafe           (unsafePerformIO)
@@ -63,8 +63,8 @@ foreign import ccall unsafe "zopfli.h ZopfliCompress"
 
 compress :: Options -> Format -> B.ByteString -> B.ByteString
 -- zopfli doesn't handle zero length data
-compress _ GZIP "" = B.concat . BL.toChunks $ G.compress ""
-compress _ ZLIB "" = B.concat . BL.toChunks $ Z.compress ""
+compress _ GZIP ""    = B.concat . BL.toChunks $ G.compress ""
+compress _ ZLIB ""    = B.concat . BL.toChunks $ Z.compress ""
 compress _ DEFLATE "" = B.concat . BL.toChunks $ ZR.compress ""
 
 compress options format input = unsafePerformIO $ do
