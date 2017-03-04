@@ -31,9 +31,9 @@ makeStrict decompressor = toStrict . decompressor . toLazy
 spec :: Spec
 spec =
   describe "compress" $ do
-    it "should compress in zlib compatible format" $ property $
+    it "Compresses in zlib compatible format" . property $
       \payload -> (makeStrict Zlib.decompress . compress $ payload) == payload
-    it "should compress in gzip compatible format" $ property $
+    it "Compresses in gzip compatible format" . property $
       \payload -> (makeStrict GZip.decompress . compressWith defaultCompressOptions GZIP $ payload) == payload
-    it "should compress in deflate compatible format" $ property $
+    it "Compresses in deflate compatible format" . property $
       \payload -> (makeStrict ZRaw.decompress . compressWith defaultCompressOptions DEFLATE $ payload) == payload
