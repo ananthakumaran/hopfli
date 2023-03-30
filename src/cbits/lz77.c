@@ -103,7 +103,7 @@ void ZopfliStoreLitLenDist(unsigned short length, unsigned short dist,
   size_t llstart = ZOPFLI_NUM_LL * (origsize / ZOPFLI_NUM_LL);
   size_t dstart = ZOPFLI_NUM_D * (origsize / ZOPFLI_NUM_D);
 
-  /* Everytime the index wraps around, a new cumulative histogram is made: we're
+  /* Every time the index wraps around, a new cumulative histogram is made: we're
   keeping one histogram value per LZ77 symbol rather than a full histogram for
   each to save memory. */
   if (origsize % ZOPFLI_NUM_LL == 0) {
