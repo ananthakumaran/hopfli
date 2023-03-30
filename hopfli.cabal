@@ -6,7 +6,7 @@ author:              Anantha Kumaran <ananthakumaran@gmail.com>
 maintainer:          Cristian Adrián Ontivero <cristianontivero@gmail.com>
 homepage:            https://github.com/ananthakumaran/hopfli
 bug-reports:         https://github.com/ananthakumaran/hopfli/issues
-synopsis:            Bidings to Google's Zopfli compression library
+synopsis:            Bindings to Google's Zopfli compression library
 category:            Codec
 build-type:          Simple
 cabal-version:       >=1.10

@@ -42,7 +42,7 @@ void ZopfliLengthsToSymbols(const unsigned* lengths, size_t n, unsigned maxbits,
 /*
 Calculates the entropy of each symbol, based on the counts of each symbol. The
 result is similar to the result of ZopfliCalculateBitLengths, but with the
-actual theoritical bit lengths according to the entropy. Since the resulting
+actual theoretical bit lengths according to the entropy. Since the resulting
 values are fractional, they cannot be used to encode the tree specified by
 DEFLATE.
 */

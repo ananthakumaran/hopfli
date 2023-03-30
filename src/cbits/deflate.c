@@ -621,7 +621,7 @@ double ZopfliCalculateBlockSizeAutoType(const ZopfliLZ77Store* lz77,
 }
 
 /* Since an uncompressed block can be max 65535 in size, it actually adds
-multible blocks if needed. */
+multiple blocks if needed. */
 static void AddNonCompressedBlock(const ZopfliOptions* options, int final,
                                   const unsigned char* in, size_t instart,
                                   size_t inend,
